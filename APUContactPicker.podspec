@@ -28,16 +28,16 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '9.0'
   s.requires_arc = true
 
- # s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC -all_load -force_load' }
-#s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC -all_load -force_load' }
+  s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC ' }
+  s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
 
 
   s.source_files = 'Pod/Classes/**/*'
 
- # s.ios.vendored_library = 'Pod/Libraries/APUContactPickerFramework.a'
- # s.ios.library = 'APUContactPickerFramework'
- # s.libraries = 'APUContactPickerFramework'
+  s.ios.vendored_library = 'APUContactPicker/Pod/Libraries/APUContactPickerFramework.a'
+ s.ios.library = 'APUContactPickerFramework'
+  s.libraries = 'APUContactPickerFramework'
  
- # s.resource = 'Pod/Assets/ContactPickerFrameworkResources.bundle'
+  s.resource = 'APUContactPicker/Pod/Assets/ContactPickerFrameworkResources.bundle'
 
 end
