@@ -9,32 +9,35 @@
 Pod::Spec.new do |s|
   s.name             = "APUContactPicker"
   s.version          = "0.1.0"
-  s.summary          = "A short description of APUContactPicker."
+  s.summary          = "Contact picker with built-in datasource"
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = <<-DESC
-                       DESC
+  s.description      = "APUContactPicker is a contact picker with datasource and views. Main view based on TLTagsView."
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/APUContactPicker"
+  s.homepage         = "https://github.com/Oleygen/APUContactPicker"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Hennadij" => "Oleygen@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/APUContactPicker.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/Oleygen/APUContactPicker.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '9.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'APUContactPicker' => ['Pod/Assets/*.png']
-  }
+ # s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC -all_load -force_load' }
+#s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC -all_load -force_load' }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+
+  s.source_files = 'Pod/Classes/**/*'
+
+ # s.ios.vendored_library = 'Pod/Libraries/APUContactPickerFramework.a'
+ # s.ios.library = 'APUContactPickerFramework'
+ # s.libraries = 'APUContactPickerFramework'
+ 
+ # s.resource = 'Pod/Assets/ContactPickerFrameworkResources.bundle'
+
 end
